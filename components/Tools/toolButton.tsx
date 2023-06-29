@@ -19,7 +19,7 @@ export default function ToolButton({ children, cont }: LinkButtonsProps) {
       {children}
     </button>
     </PopoverTrigger>
-    <PopoverContent className="w-80" side="right" >
+    <PopoverContent className="w-90" side="right" >
       {cont}
     </PopoverContent>
     </Popover>
