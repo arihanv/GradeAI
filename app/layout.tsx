@@ -22,8 +22,8 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex flex-col-reverse items-center md:items-start gap-5 md:flex-row justify-center py-[48px] lg:py-[128px] p-6">
-            <div className="max-w-[650px] w-full">{children}</div>
-            <div className="flex flex-row md:flex-col items-start gap-5 justify-center w-[150px]">
+            <div className="max-w-[650px] w-full stagger-1" data-animate>{children}</div>
+            <div className="flex flex-row md:flex-col items-start gap-5 justify-center w-[150px] stagger-1" data-animate>
               <Tools />
               <Suggestions />
             </div>
