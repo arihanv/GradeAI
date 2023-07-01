@@ -39,11 +39,11 @@ export default function RubricCont() {
       <div>Rubric</div>
       <div>
         <h1>Rows</h1>
-        <button onClick={() => { setRowCount(rowCount + 1) }}>+</button>
-        <button onClick={() => { setRowCount(rowCount - 1) }}>-</button>
+        <button onClick={() => { setRowCount(Math.min(rowCount + 1, 10)) }}>+</button>
+        <button onClick={() => { setRowCount(Math.min(rowCount - 1)) }}>-</button>
         <h1>Columns</h1>
-        <button onClick={() => { setColumnCount(columnCount + 1) }}>+</button>
-        <button onClick={() => { setColumnCount(columnCount - 1) }}>-</button>
+        <button onClick={() => { setColumnCount(Math.min(columnCount + 1)) }}>+</button>
+        <button onClick={() => { setColumnCount(Math.min(columnCount - 1)) }}>-</button>
       </div>
       <table className="rubric">
         {/* Render the table rows */}
