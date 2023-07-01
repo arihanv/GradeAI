@@ -14,8 +14,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
-
-// type Popup = {
-//   togglePopup: 
-// }
+  }

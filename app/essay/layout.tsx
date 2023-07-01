@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import Tools from "@/components/Tools/tools";
 import Suggestions from "@/components/suggestions";
 
