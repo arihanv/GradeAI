@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import Tools from "@/components/Tools/tools";
 import Suggestions from "@/components/suggestions";
+import Score from "./score";
 
 export default function EssayLayout({
   children,
@@ -9,7 +10,8 @@ export default function EssayLayout({
 }) {
   return (
     <div className="flex flex-col-reverse items-center md:items-start gap-5 md:flex-row justify-center">
-      <div className="w-full max-w-[650px] stagger-1" data-animate>
+      <Score/>
+      <div className="w-full flex-1 stagger-1" data-animate>
         {children}
       </div>
       <div
