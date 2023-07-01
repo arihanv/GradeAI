@@ -68,6 +68,10 @@
   }
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
 @font-face {
   font-family: "inter";
   src: url("../public/fonts/inter-subset.woff2") format("woff");
@@ -78,7 +82,7 @@
     font-family: inter;
     @apply border-border;
   }
-  p{
+  p {
     font-family: inter;
   }
   body {
@@ -147,6 +151,6 @@
   --stagger: 8;
 }
 
-div{
+div {
   color: white;
 }

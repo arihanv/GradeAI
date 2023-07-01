@@ -25,6 +25,9 @@ export default function page() {
             >
               <Github size={20} />
             </Link>
+            <Link href="/#features" className={buttonVariants()}>
+             Features
+            </Link>
           </div>
           <div className="px-3">
             <div className="px-2 py-0.5 font-semibold border bg-gray-800 w-fit rounded-xl">
@@ -37,6 +40,15 @@ export default function page() {
         <hr></hr>
       </div>
       <div className="w-full flex justify-center text-4xl font-bold tracking-tight flex-col items-center gap-5">
+      Demo Video
+        <div className="overflow-hidden rounded-2xl border-4 border-white shadow-sm shadow-white">
+          <YoutubeVideo />
+        </div>
+      </div>
+      <div className="w-full">
+        <hr></hr>
+      </div>
+      <div id="features" className="w-full flex justify-center text-4xl font-bold tracking-tight flex-col items-center gap-5">
         Features
         <div className="flex gap-10">
           <div className="flex gap-8">
@@ -75,15 +87,6 @@ export default function page() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="w-full">
-        <hr></hr>
-      </div>
-      <div className="w-full flex justify-center text-4xl font-bold tracking-tight flex-col items-center gap-5">
-        Demo Video
-        <div className="overflow-hidden rounded-2xl border-4 border-white shadow-sm shadow-white">
-          {/* <YoutubeVideo /> */}
         </div>
       </div>
     </div>
