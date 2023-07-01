@@ -51,8 +51,8 @@ export default function Typing() {
   });
 
   return (
-    <div className="typing-parent w-full flex">
-      <p className="text-xl">GradeAI makes grading</p>&nbsp;
+    <div className="typing-parent w-full flex tracking-tight">
+      <p>GradeAI makes grading</p>&nbsp;
       <p>
         <span className="typing"></span>
         <span className="cursor">&nbsp;</span>
