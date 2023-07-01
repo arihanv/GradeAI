@@ -12,6 +12,7 @@ type Props = {};
 export default function Tools({}: Props) {
   const [rowCount, setRowCount] = useState(4);
   const [columnCount, setColumnCount] = useState(4);
+  const [open, setOpen] = useState(false);
 
   return (
     <div>
