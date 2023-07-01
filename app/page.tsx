@@ -17,11 +17,13 @@ export default function page() {
           <Link href="/essay" className={buttonVariants()}>
             Get Started
           </Link>
-          <Link href="/essay" className={buttonVariants()}>
+          <Link href="https://github.com/orgs/GradeAI/repositories" target="_" className={buttonVariants()}>
             <Github size={20} />
           </Link>
         </div>
-        <div className="px-3 font-medium">Made by Arihan, Neil,</div>
+        <div className="px-3">
+        <div className="px-2 py-0.5 font-semibold border bg-gray-800 w-fit rounded-xl">Made by Arihan, Neil, Ian, and Ibrahim</div>
+        </div>
         </div>
       </div>
       <div className="w-full">
