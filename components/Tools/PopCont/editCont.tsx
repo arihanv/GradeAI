@@ -28,7 +28,7 @@ export default function EditCont({}: Props) {
             type="text"
             name="course"
             id="course"
-            placeholder="Course Name"
+            placeholder='Ex: "English Honors"'
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -38,7 +38,7 @@ export default function EditCont({}: Props) {
             onChange={(e) => setInstructions(e.target.value)}
             name="assignment"
             id="assignment"
-            placeholder="Assignment Instructions"
+            placeholder='Ex: "Write an essay regarding the use of pathos in Macbeth."'
           />
         </div>
       </div>
