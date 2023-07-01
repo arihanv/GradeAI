@@ -8,8 +8,12 @@
 }
 
 .typing {
-  color: #4A86E8;
+  color: #4a86e8;
   font-weight: bold;
+}
+
+.aipiece {
+  color: #4a86e8;
 }
 
 .cursor {

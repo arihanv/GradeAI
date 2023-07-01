@@ -52,7 +52,7 @@ export default function Typing() {
 
   return (
     <div className="typing-parent w-full flex tracking-tight">
-      <p>GradeAI makes grading</p>&nbsp;
+      <p>Grade<span className="aipiece">AI</span> makes grading</p>&nbsp;
       <p>
         <span className="typing"></span>
         <span className="cursor">&nbsp;</span>
