@@ -37,6 +37,8 @@ export default function PGBar({ value }: Props) {
   return (
     <div
       className={`radial-progress ${colorClass} ${value}`}
+
+      // @ts-ignore
       style={{ "--value": currentValue, "--size": "9rem" }}
     >
       <div className="text-white font-semibold text-3xl">{currentValue}%</div>
