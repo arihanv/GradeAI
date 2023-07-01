@@ -17,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head/>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex flex-col justify-center w-full items-center py-[48px] lg:py-[128px]">
