@@ -80,6 +80,9 @@
     font-family: inter;
     @apply border-border;
   }
+  p{
+    font-family: inter;
+  }
   body {
     background-color: #1a1a1a;
   }
