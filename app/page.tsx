@@ -30,9 +30,28 @@ export default function page() {
         <hr></hr>
       </div>
       <div className="w-full flex justify-center text-4xl font-bold tracking-tight flex-col items-center gap-5">
+       Features
+       <div className="flex gap-10">
+        <div className="flex gap-8">
+          <div className="text-base font-normal tracking-normal flex-1 border bg-darkpaco p-4 rounded-xl">
+          It can accept rubrics provided by the teacher to guide the grading system. This not only makes it less unlikely for grades to be completely random but also helps stay true to the rubric when evaluating the paper.
+          </div>
+          <div className="text-base font-normal tracking-normal flex-1 border bg-darkpaco p-4 rounded-xl">
+          It can accept rubrics provided by the teacher to guide the grading system. This not only makes it less unlikely for grades to be completely random but also helps stay true to the rubric when evaluating the paper.
+          </div>
+          <div className="text-base font-normal tracking-normal flex-1 border bg-darkpaco p-4 rounded-xl">
+          It can accept rubrics provided by the teacher to guide the grading system. This not only makes it less unlikely for grades to be completely random but also helps stay true to the rubric when evaluating the paper.
+          </div>
+       </div>
+       </div>
+      </div>
+      <div className="w-full">
+        <hr></hr>
+      </div>
+      <div className="w-full flex justify-center text-4xl font-bold tracking-tight flex-col items-center gap-5">
         Demo Video
         <div className="overflow-hidden rounded-2xl border-4 border-white shadow-sm shadow-white">
-          <YoutubeVideo />
+          {/* <YoutubeVideo /> */}
         </div>
       </div>
     </div>
