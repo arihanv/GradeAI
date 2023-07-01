@@ -16,26 +16,23 @@ export default function RubricCont() {
   };
 
   // Generate the table column HTML
-  let column = "";
-  for (let i = 0; i < columnCount; i++) {
-    column += `<td><input type="text" placeholder='Explanation for grade' /></td>`;
-  }
+  let column = Array.from({ length: columnCount }, () => `<td><input type="text" placeholder='Explanation for grade' /></td>`).join('');
 
   // Generate the table rows HTML
   let rows = `
     <tr>
       <th>Grades/Criteria</th>
       ${Array.from({ length: columnCount }, (_, i) => `<th>Level ${i + 1}</th>`).join('')}
-    </tr>`;
+    </tr>
+    
+    ${Array.from({ length: columnCount }, () => `
+    <tr>
+      <td>
+        <input type="text" placeholder='Criteria' />
+      </td>
+      ${column}
+    </tr>`).join('')}`;
 
-  for (let i = 0; i < rowCount; i++) {
-    rows += `
-      <tr>
-        <td><input type="text" placeholder='Criteria' /></td>
-        ${column}
-      </tr>
-    `;
-  }
 
   return (
     <div className="rubric-popup">
