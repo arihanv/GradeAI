@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Grade AI",
+  title: "GradeAI",
   description: "An app that helps users grade their essays",
 };
 
