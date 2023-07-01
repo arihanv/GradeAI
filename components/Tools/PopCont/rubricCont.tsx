@@ -1,18 +1,46 @@
-"use client";
+type Props = {
+  rowCount: number,
+  setRowCount(i: number): void,
 
-import React, { useState } from 'react';
+  columnCount: number,
+  setColumnCount(i: number): void
+}
 
-
-export default function RubricCont() {
-  const [rowCount, setRowCount] = useState(4);
-  const [columnCount, setColumnCount] = useState(4);
-
+export default function RubricCont({rowCount, setRowCount, columnCount, setColumnCount}: Props) {
   const increaseRows = () => {
+    // Max 10 rows
+    if (rowCount >= 10) {
+      return;
+    }
+
     setRowCount(rowCount + 1);
   };
 
-  const increaseColumns = () => {
+  const decreaseRows = () => {
+    // Min 1 row
+    if (rowCount <= 1) {
+      return;
+    }
 
+    setRowCount(rowCount - 1);
+  };
+
+  const increaseColumns = () => {
+    // Max 10 columns
+    if (columnCount >= 10) {
+      return;
+    }
+
+    setColumnCount(columnCount + 1);
+  };
+
+  const decreaseColumns = () => {
+    // Min 1 column
+    if (columnCount <= 1) {
+      return;
+    }
+
+    setColumnCount(columnCount - 1);
   };
 
   // Generate the table column HTML
@@ -25,7 +53,7 @@ export default function RubricCont() {
       ${Array.from({ length: columnCount }, (_, i) => `<th>Level ${i + 1}</th>`).join('')}
     </tr>
     
-    ${Array.from({ length: columnCount }, () => `
+    ${Array.from({ length: rowCount }, () => `
     <tr>
       <td>
         <input type="text" placeholder='Criteria' />
@@ -39,11 +67,12 @@ export default function RubricCont() {
       <div>Rubric</div>
       <div>
         <h1>Rows</h1>
-        <button onClick={() => { setRowCount(Math.min(rowCount + 1, 10)) }}>+</button>
-        <button onClick={() => { setRowCount(Math.min(rowCount - 1)) }}>-</button>
+        <button onClick={increaseRows}>+</button>
+        <button onClick={decreaseRows}>-</button>
+
         <h1>Columns</h1>
-        <button onClick={() => { setColumnCount(Math.min(columnCount + 1)) }}>+</button>
-        <button onClick={() => { setColumnCount(Math.min(columnCount - 1)) }}>-</button>
+        <button onClick={increaseColumns}>+</button>
+        <button onClick={decreaseColumns}>-</button>
       </div>
       <table className="rubric">
         {/* Render the table rows */}
