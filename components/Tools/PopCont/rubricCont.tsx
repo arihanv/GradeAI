@@ -1,3 +1,5 @@
+import { buttonVariants } from "@/components/ui/button";
+
 type Props = {
   rowCount: number,
   setRowCount(i: number): void,
@@ -64,15 +66,16 @@ export default function RubricCont({rowCount, setRowCount, columnCount, setColum
 
   return (
     <div className="rubric-popup">
-      <div>Rubric</div>
+      <div className="text-lg"><b>Rubric</b></div>
+      <hr></hr>
       <div>
         <h1>Rows</h1>
-        <button onClick={increaseRows}>+</button>
-        <button onClick={decreaseRows}>-</button>
+        <button onClick={increaseRows} className={buttonVariants()}>+</button>
+        <button onClick={decreaseRows} className={buttonVariants()}>-</button>
 
         <h1>Columns</h1>
-        <button onClick={increaseColumns}>+</button>
-        <button onClick={decreaseColumns}>-</button>
+        <button onClick={increaseColumns} className={buttonVariants()}>+</button>
+        <button onClick={decreaseColumns} className={buttonVariants()}>-</button>
       </div>
       <table className="rubric">
         {/* Render the table rows */}
