@@ -1,10 +1,12 @@
 import React from "react";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface LinkButtonsProps {
   children: React.ReactNode;
@@ -13,15 +15,15 @@ interface LinkButtonsProps {
 
 export default function ToolButton({ children, cont }: LinkButtonsProps) {
   return (
-    <Popover>
-    <PopoverTrigger asChild>
-    <button className="border-rauno text-rauno border p-1 rounded-lg hover:opacity-70 transition ease-in-out">
-      {children}
-    </button>
-    </PopoverTrigger>
-    <PopoverContent className="w-80" side="right" >
-      {cont}
-    </PopoverContent>
-    </Popover>
+    <Dialog>
+      <DialogTrigger asChild>
+        <button className="border-rauno text-rauno border p-1 rounded-lg hover:opacity-70 transition ease-in-out">
+          {children}
+        </button>
+      </DialogTrigger>
+      <DialogContent>
+        {cont}
+      </DialogContent>
+    </Dialog>
   );
 }

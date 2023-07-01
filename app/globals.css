@@ -99,12 +99,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   [data-animate] {
-    animation: enter 0.6s both;
+    animation: testEnter 0.6s both;
     animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
   }
 }
 
-@keyframes enter {
+@keyframes testEnter {
   0% {
     opacity: 0;
     transform: translateY(10px);
