@@ -1,7 +1,7 @@
 import "@/app/globals.css";
 import Tools from "@/components/Tools/tools";
 import Suggestions from "@/components/suggestions";
-import Score from "./score";
+import Score from "./_score/score";
 
 export default function EssayLayout({
   children,
