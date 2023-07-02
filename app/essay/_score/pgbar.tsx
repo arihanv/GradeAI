@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 type Props = {
   value: number;
@@ -18,25 +18,29 @@ export default function PGBar({ value }: Props) {
         return newValue > value ? value : newValue;
       });
     };
-    const animationInterval = setInterval(updateValue, animationDuration / animationSteps);
+    const animationInterval = setInterval(
+      updateValue,
+      animationDuration / animationSteps
+    );
     return () => {
       clearInterval(animationInterval);
     };
   }, [value]);
 
-  let colorClass = '';
+  let colorClass = "";
 
   if (currentValue <= 50) {
-    colorClass = 'text-red-500';
+    colorClass = "text-red-500";
   } else if (currentValue <= 75) {
-    colorClass = 'text-yellow-500';
+    colorClass = "text-yellow-500";
   } else {
-    colorClass = 'text-green-500';
+    colorClass = "text-green-500";
   }
 
   return (
     <div
       className={`radial-progress ${colorClass} ${value}`}
+      //@ts-ignore
       style={{ "--value": currentValue, "--size": "9rem" }}
     >
       <div className="text-white font-semibold text-3xl">{currentValue}%</div>

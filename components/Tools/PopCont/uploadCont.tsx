@@ -42,6 +42,19 @@ export default function UploadCont({}: Props) {
     if (fileInput !== undefined) {
       setFileInput(undefined);
       setFileName("");
+      fetch("https://grade-ai-ed153ea53b42.herokuapp.com/", {
+        method: "POST",
+        body: JSON.stringify({
+          userId: 1,
+          title: "Fix my bugs",
+          completed: false,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
     }
     if (textInput !== "") {
       setTextInput("");

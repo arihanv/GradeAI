@@ -17,13 +17,22 @@ export default function Tools({}: Props) {
   return (
     <div>
       <div className="h-fit border-rauno border rounded-2xl p-1.5 flex md:flex-col gap-1.5 justify-center">
-        <ToolButton cont={<UploadCont/>}>
+        <ToolButton cont={<UploadCont />}>
           <Upload size={20} />
         </ToolButton>
-        <ToolButton cont={<EditCont/>}>
+        <ToolButton cont={<EditCont />}>
           <Edit size={20} />
         </ToolButton>
-        <ToolButton cont={<RubricCont rowCount={rowCount} setRowCount={setRowCount} columnCount={columnCount} setColumnCount={setColumnCount} />}>
+        <ToolButton
+          cont={
+            <RubricCont
+              rowCount={rowCount}
+              setRowCount={setRowCount}
+              columnCount={columnCount}
+              setColumnCount={setColumnCount}
+            />
+          }
+        >
           <Table size={20} />
         </ToolButton>
       </div>

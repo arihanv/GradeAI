@@ -10,7 +10,7 @@ export default function EssayLayout({
 }) {
   return (
     <div className="flex flex-col-reverse items-center md:items-start gap-5 md:flex-row justify-center">
-      <Score/>
+      <Score />
       <div className="w-full flex-1 stagger-1" data-animate>
         {children}
       </div>

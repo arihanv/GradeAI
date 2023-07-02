@@ -14,6 +14,19 @@ export default function RubricCont({
   columnCount,
   setColumnCount,
 }: Props) {
+  const updateRubric = () => {
+    let rows = [];
+
+    for (const tableRow of Array.from(document.querySelectorAll("tr"))) {
+      const cells = Array.from(tableRow.querySelectorAll("td, th"));
+      const rowContent = cells.map((cell: any) => cell.innerText.trim());
+
+      rows.push(rowContent);
+    }
+
+    setRubric(rows);
+  };
+
   const increaseRows = () => {
     // Max 10 rows
     if (rowCount >= 10) {
@@ -51,10 +64,11 @@ export default function RubricCont({
   };
 
   // Generate the table columns
-  const column = Array.from(
-    { length: columnCount },
-    (_, i) => <td key={i}><input type="text" placeholder="Explanation for grade" /></td>
-  );
+  const column = Array.from({ length: columnCount }, (_, i) => (
+    <td key={i}>
+      <input type="text" placeholder="Explanation for grade" />
+    </td>
+  ));
 
   // Generate the table rows
   const rows = (

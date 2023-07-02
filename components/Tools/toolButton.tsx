@@ -21,9 +21,7 @@ export default function ToolButton({ children, cont }: LinkButtonsProps) {
           {children}
         </button>
       </DialogTrigger>
-      <DialogContent className="bg-darkpaco">
-        {cont}
-      </DialogContent>
+      <DialogContent className="bg-darkpaco">{cont}</DialogContent>
     </Dialog>
   );
 }
