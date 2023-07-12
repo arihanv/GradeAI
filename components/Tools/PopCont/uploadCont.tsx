@@ -163,6 +163,7 @@ export default function UploadCont({}: Props) {
               <p className="text-ellipsis overflow-hidden p-4">{imageName}</p>
             ) : (
               <>
+                {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <Image size={48} />
               </>
             )}

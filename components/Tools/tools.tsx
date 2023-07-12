@@ -24,12 +24,7 @@ export default function Tools({}: Props) {
         </ToolButton>
         <ToolButton
           cont={
-            <RubricCont
-              rowCount={rowCount}
-              setRowCount={setRowCount}
-              columnCount={columnCount}
-              setColumnCount={setColumnCount}
-            />
+            <RubricCont/>
           }
         >
           <Table size={20} />
