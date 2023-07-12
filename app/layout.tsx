@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem forcedTheme="dark">
           <div className="flex flex-col justify-center w-full items-center py-[48px] lg:py-[128px]">
             <div className="w-full stagger-1 max-w-[1000px]" data-animate>
               {children}
