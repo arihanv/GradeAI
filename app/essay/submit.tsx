@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useAtom } from "jotai";
@@ -87,8 +87,8 @@ export default function Submit({
     }
   }
 
-  const [score, setScore] = useAtom(scoreAtom);
-  const [feedback, setFeedback] = useAtom(feedbackAtom);
+  const [_score, setScore] = useAtom(scoreAtom);
+  const [_feedback, setFeedback] = useAtom(feedbackAtom);
   const [openDialog, setOpenDialog] = useState(false);
 
   return (
