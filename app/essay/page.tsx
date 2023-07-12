@@ -22,12 +22,18 @@ export default function Home() {
   const [rubric, _setRubric] = useAtom(rubricAtom);
 
   // Stringify Rubric
-  let rubricInformation = `| Grades/Criteria | ${Array.from({ length: rubric.length - 1 }, (_, i) => `Level ${i + 1}`).join(" | ")} |\n`;
+  let rubricInformation = `| Grades/Criteria | ${Array.from(
+    { length: rubric.length - 1 },
+    (_, i) => `Level ${i + 1}`
+  ).join(" | ")} |\n`;
 
   for (let i = 0; i < rubric.length; i++) {
-    const rowContent = rubric[i].map((rowItem: any) => rowItem.trim()).join(" | ");
+    const rowContent = rubric[i]
+      .map((rowItem: any) => rowItem.trim())
+      .join(" | ");
 
-    rubricInformation += `| ${rowContent} |` + (i == rubric.length - 1 ? "" : "\n");
+    rubricInformation +=
+      `| ${rowContent} |` + (i == rubric.length - 1 ? "" : "\n");
   }
 
   return (

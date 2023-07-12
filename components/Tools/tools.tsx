@@ -22,11 +22,7 @@ export default function Tools({}: Props) {
         <ToolButton cont={<EditCont />}>
           <Edit size={20} />
         </ToolButton>
-        <ToolButton
-          cont={
-            <RubricCont/>
-          }
-        >
+        <ToolButton cont={<RubricCont />}>
           <Table size={20} />
         </ToolButton>
       </div>

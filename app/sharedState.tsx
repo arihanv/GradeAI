@@ -1,5 +1,5 @@
 import { atom } from "jotai";
-import { atomWithStorage } from "jotai/utils"
+import { atomWithStorage } from "jotai/utils";
 
 // Feedback from AI
 export const feedbackAtom = atom("");
@@ -8,7 +8,10 @@ export const feedbackAtom = atom("");
 export const scoreAtom = atom(0);
 
 // Rubric Array
-export const rubricAtom = atomWithStorage("rubric", Array(4).fill(Array(5).fill("")));
+export const rubricAtom = atomWithStorage(
+  "rubric",
+  Array(4).fill(Array(5).fill(""))
+);
 
 // Course Name
 export const courseAtom = atomWithStorage("course", "");

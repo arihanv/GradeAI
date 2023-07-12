@@ -5,7 +5,7 @@ import { rubricAtom } from "@/app/sharedState";
 
 type Props = {};
 
-const RubricCont: React.FC<Props> = ({ }: Props) => {
+const RubricCont: React.FC<Props> = ({}: Props) => {
   const [rubric, setRubric] = useAtom(rubricAtom);
 
   const increaseRows = () => {
@@ -30,7 +30,7 @@ const RubricCont: React.FC<Props> = ({ }: Props) => {
     }
 
     setRubric(rubric.slice(0, -1));
-  }
+  };
 
   const decreaseColumns = () => {
     if (rubric[0].length <= 2) {
@@ -38,7 +38,7 @@ const RubricCont: React.FC<Props> = ({ }: Props) => {
     }
 
     setRubric(rubric.map((row) => row.slice(0, -1)));
-  }
+  };
 
   const handleCellChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -87,14 +87,17 @@ const RubricCont: React.FC<Props> = ({ }: Props) => {
   );
 
   const stringifyRubric = () => {
-    let rows = `| Grades/Criteria | ${Array.from({ length: rubric.length - 1 }, (_, i) => `Level ${i + 1}`).join(" | ")} |\n`;
+    let rows = `| Grades/Criteria | ${Array.from(
+      { length: rubric.length - 1 },
+      (_, i) => `Level ${i + 1}`
+    ).join(" | ")} |\n`;
 
     for (const row of rubric) {
       const rowContent = row.map((column: any) => column.trim()).join(" | ");
 
-      rows += `| ${rowContent} |\n`
+      rows += `| ${rowContent} |\n`;
     }
-    
+
     return rows;
   };
 
