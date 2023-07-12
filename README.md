@@ -20,11 +20,13 @@ Welcome to the GradeAI-Frontend repository! This is the frontend component of Gr
 To get started, follow these steps:
 
 Clone the repository:
+
 ```bash
 git clone https://github.com/GradeAI/GradeAI-Frontend.git
 ```
 
 Install the dependencies using npm, yarn, or pnpm:
+
 ```bash
 npm install
 # or
@@ -34,6 +36,7 @@ pnpm install
 ```
 
 Run the development server:
+
 ```bash
 npm run dev
 # or
