@@ -4,7 +4,7 @@ Welcome to the GradeAI-Frontend repository! This is the frontend component of Gr
 
 ## Demo Video
 
-[![Demo Video](http://img.youtube.com/vi/RYGEBW2aeRY/0.jpg)](http://www.youtube.com/watch?v=RYGEBW2aeRY)
+[![Demo Video](http://img.youtube.com/vi/ol1-vmbqTZo/0.jpg)](http://www.youtube.com/watch?v=ol1-vmbqTZo)
 
 # Features
 
