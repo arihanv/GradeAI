@@ -1,7 +1,6 @@
 "use client";
-import "app/globals.css";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export default function Typing() {
   useEffect(() => {
@@ -14,41 +13,58 @@ export default function Typing() {
     const newTextDelay = 1000; // Delay between current and next text
     let textArrayIndex = 0;
     let charIndex = 0;
+    let timeoutID;
 
     function type() {
+      clearTimeout(timeoutID);
+
       if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains("typing"))
+        if (!cursorSpan.classList.contains("typing")) {
           cursorSpan.classList.add("typing");
-        typedTextSpan.textContent +=
-          textArray[textArrayIndex].charAt(charIndex);
+        }
+
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
-        setTimeout(type, typingDelay);
+
+        timeoutID = setTimeout(type, typingDelay);
       } else {
         cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
+        timeoutID = setTimeout(erase, newTextDelay);
       }
     }
 
     function erase() {
+      clearTimeout(timeoutID);
+
       if (charIndex > 0) {
-        if (!cursorSpan.classList.contains("typing"))
+        if (!cursorSpan.classList.contains("typing")) {
           cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(
-          0,
-          charIndex - 1
-        );
+        }
+
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
         charIndex--;
-        setTimeout(erase, erasingDelay);
+
+        timeoutID = setTimeout(erase, erasingDelay);
       } else {
         cursorSpan.classList.remove("typing");
         textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 1100);
+
+        if (textArrayIndex >= textArray.length) {
+          textArrayIndex = 0;
+        }
+
+        timeoutID = setTimeout(type, typingDelay + 1100);
       }
     }
 
-    if (textArray.length) setTimeout(type, newTextDelay + 250);
-  });
+    if (textArray.length) {
+      timeoutID = setTimeout(type, newTextDelay + 250);
+    }
+
+    return () => {
+      clearTimeout(timeoutID);
+    };
+  }, []);
 
   return (
     <div className="typing-parent w-full flex tracking-tight">
