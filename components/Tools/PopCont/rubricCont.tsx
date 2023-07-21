@@ -48,7 +48,7 @@ const RubricCont: React.FC<Props> = ({}: Props) => {
   ) => {
     const value = e.target.value;
     setRubric((rubric) => {
-      const newRubric = [...rubric];
+      const newRubric = rubric.map((row) => [...row]);
       newRubric[rowIndex][columnIndex] = value;
       return newRubric;
     });
